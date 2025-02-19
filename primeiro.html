@@ -1,76 +1,111 @@
-<html>
-<title>Aprendendo!</title>
-<h1 id="titulo">"Que doidera.........   "</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        #titulo {
+            background: #1b1b1e;
+            color: #70e000;
+            width: 94.11%;
+            padding: 40px;
+            text-align: center;
+            font-size: 60px;
+        }
 
-<style>
+        #master {
+            background: purple;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+            box-sizing: border-box;
+        }
 
-#titulo {
-	background: grey;
-	color: white;
-	width: 100%;
-	padding: 40px 2%;
-	text-align: center;
-	font-size: 60px;
+        #esquerda, #centro, #direita {
+            width: 300px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
 
-}
-div {
-	width: 100px;
-	height: 50px;
+        #esquerda {
+            background: cornflowerBlue;
+        }
 
-}
+        #centro {
+            background: green;
+        }
 
-#divCabeca {
-	background: cornflowerBlue;
-	width: 600px;
-        	padding: 40px 2%;
-        	color: white;
-        	text-align: center;
+        #direita {
+            background: aqua;
+        }
 
-}
+        iframe {
+            width: 240px;
+            height: 300.783px;
+            border: none;
+        }
 
-#divCorpo {
-	background: green;
-	width: 600px;
-        	padding: 40px 2%;
-        	color: white;
-        	text-align: center;
-}
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #1b1b1e;
+            color: white;
+        }
 
-#divRodape {
-	background: aqua;
-	width: 600px;
-        	padding: 40px 2%;
-        	color: white;
-        	text-align: center;
-}
-</style>
-
+        button:hover {
+            background-color: #70e000;
+        }
+    </style>
+</head>
 <body>
-	<iframe src="https://gifer.com/embed/XOsX" width=240 height=300,783 frameBorder="0" allowFullScreen></iframe>
-	<div id="divCabeca">
-	   <h2>Gatinhos</h2>
-	    <a href="https://gifer.com/pt/2GU" style="text-decoration: none;">
-  	    <button>Clique aqui</button>
-	    </a>
-	</div>
+    <h1 id="titulo">"Que doidera.........   "</h1>
+    <div class="Quack-Play" id="contato">
+        <audio id="audio" src="https://www.myinstants.com/pt/instant/mac-quack-83896/"></audio>
+        <button class="button" onclick="playQuack()">Quack-Play🦆</button>
+    </div>
 
-	<div id="divCorpo">
-	    <h2>Patinhos</h2>
-	    <a href="https://gifer.com/pt/XOsX" style="text-decoration: none;">
-  	    <button>Clique aqui</button>
-	    </a>
-	</div>
+    <script>
+        function playQuack() {
+            var sound = document.getElementById('audio');
+            sound.play();
+        }
+    </script>
 
-	<div id="divRodape">
-	    <h2>Cachorrinho</h2>
-	    <a href="https://tenor.com/pt-BR/view/cacausando-cacauecookie-festajunina-humor-cachorro-gif-13357562688762577451" style="text-decoration: none;">
-  	    <button>Clique aqui</button>
-	    </a>
-	</div>
+    <div id="master">
+        <iframe src="https://gifer.com/embed/XOsX" allowFullScreen></iframe>
+        <div id="esquerda">
+            <h2>Gatinhos</h2>
+            <a href="https://gifer.com/pt/2GU" style="text-decoration: none;">
+                <button>Clique aqui</button>
+            </a>
+        </div>
 
+        <div id="centro">
+            <h2>Patinhos</h2>
+            <a href="https://gifer.com/pt/XOsX" style="text-decoration: none;">
+                <button>Clique aqui</button>
+            </a>
+        </div>
 
-
+        <div id="direita">
+            <h2>Cachorrinho</h2>
+            <a href="https://tenor.com/pt-BR/view/cacausando-cacauecookie-festajunina-humor-cachorro-gif-13357562688762577451" style="text-decoration: none;">
+                <button>Clique aqui</button>
+            </a>
+        </div>
+    </div>
 </body>
-
 </html>
